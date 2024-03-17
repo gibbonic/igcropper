@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IGCropper</title>
+    <link rel="stylesheet" href="./src/css/style.css">
+    <script src="./src/js/main.js"></script>
+</head>
+<body>
+    <h1 id="title">IGCropper</h1>
+    <p id="subtitle">IGCropper v1.0.0 | Made by <a href="https://github.com/gibbonic/igcropper" target="_blank">Gibbonic</a></p>
+    <div class="container">
+        <div class="left">
+            <canvas width="250" height="250"></canvas>
+            <input type="range" orient="vertical" id="verticalSlider" min="0" max="100" disabled>
+            <br>
+            <input type="range" id="horizontalSlider" min="0" max="100" disabled>
+        </div>
+        <div class="right">
+            <h2>Options</h2>
+            <span><b>Reset: </b></span>
+            <button onClick="window.location.reload();" class="btn">
+                <span>Reset</span>
+            </button>
+            <br>
+            <span><b>Image: </b></span>
+                <label for="fileInput" id="fileInputLabel" class="btn">Choose file...</label>
+                <input type="file" id="fileInput" class="hidden" accept="image/png, image/gif, image/jpeg">
+            <br>
+            <span><b>Crop: </b></span>
+            <button id="cropBtn" class="btn">
+                <span>Crop!</span>
+            </button>
+            <br>
+            <span>‎</span>
+        </div>
+    </div>
+    <div id="images" class="images">
+        <h2>Images</h2>
+    </div>
+</body>
+</html>

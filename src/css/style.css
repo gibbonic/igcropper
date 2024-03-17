@@ -1,0 +1,135 @@
+body {
+    background-color: #0e1111;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    /* Force width to stay above 400px, because things get funky if it goes under that and I want to avoid that with my entire being. */
+    min-width: 500px;
+    width: auto !important;
+    width: 500px;
+    color: whitesmoke;
+}
+
+#title, #subtitle {
+    text-align: center;
+}
+
+canvas {
+    border: whitesmoke 1px solid;
+    margin-top: 10px;
+}
+
+.container {
+    display: flex;
+}
+
+.left {
+    width: 500px;
+    text-align: center;
+    margin-right: 5px;
+    flex-shrink: 0;
+    border: 1px whitesmoke solid;
+}
+
+.right {
+    width: 100%;
+    text-align: center;
+    border: 1px whitesmoke solid;
+}
+
+.right h2 {
+    text-decoration: underline;
+}
+
+#horizontalSlider {
+    width: 250px;
+    height: 8px;
+    margin-top: 0;
+    margin-bottom: 16px;
+}
+
+input[type=range][orient=vertical] {
+    appearance: slider-vertical;
+    width: 8px;
+    height: 250px;
+    position: absolute;
+    margin-left: 15px;
+    margin-top: 12px;
+}
+
+input[type=range]:not([disabled])::-webkit-slider-thumb:hover {
+    cursor: grab;
+}
+
+input[type=range]:not([disabled])::-moz-range-thumb:hover {
+    cursor: grab;
+}
+
+input[type=range]:not([disabled])::-webkit-slider-thumb:active {
+    cursor: grabbing;
+}
+
+input[type=range]:not([disabled])::-moz-range-thumb:active {
+    cursor: grabbing;
+}
+
+.btn {
+    border: 2px whitesmoke solid;
+    border-radius: 5px;
+    padding: 5px;
+    background-color: gray;
+    margin-bottom: 10px;
+    font-family: inherit;
+    font-size: inherit;
+    color: whitesmoke;
+    display: inline-block;
+}
+
+.btn:hover {
+    filter: brightness(1.25);
+    cursor: pointer;
+}
+
+.hidden {
+    display: none;
+}
+
+.images {
+    border: 1px whitesmoke solid;
+    margin-top: 5px;
+    text-align: center;
+    text-decoration: underline;
+}
+
+img:hover {
+    cursor: pointer;
+    filter: brightness(1.5);
+}
+
+.row {
+    font-size: 0;
+    margin: 0;
+    width: 100%;
+    float: left;
+}
+
+@media (max-width: 850px){
+    .container {
+        display: inline;
+    }
+
+    .left {
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+    .right {
+        margin-top: 5px;
+        width: 100%;
+        box-sizing: border-box;
+    }
+}
+
+@media (max-width: 500px){
+    body {
+        padding-right: 5px;
+    }
+}
