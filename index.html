@@ -9,24 +9,25 @@
 </head>
 <body>
     <h1 id="title">IGCropper</h1>
-    <p id="subtitle">IGCropper v1.0.0 | Made by <a href="https://github.com/gibbonic/igcropper" target="_blank">Gibbonic</a></p>
+    <p id="subtitle">IGCropper v1.1.0 | Made by <a href="https://github.com/gibbonic/igcropper" target="_blank">Gibbonic</a></p>
     <div class="container">
         <div class="left">
             <canvas width="250" height="250"></canvas>
-            <input type="range" orient="vertical" id="verticalSlider" min="0" max="100" disabled>
+            <input type="range" orient="vertical" id="verticalSlider" min="0" max="100" value="50" disabled>
             <br>
-            <input type="range" id="horizontalSlider" min="0" max="100" disabled>
+            <input type="range" id="horizontalSlider" min="0" max="100" value="50" disabled>
         </div>
         <div class="right">
             <h2>Options</h2>
-            <span><b>Reset: </b></span>
-            <button onClick="window.location.reload();" class="btn">
-                <span>Reset</span>
-            </button>
-            <br>
             <span><b>Image: </b></span>
                 <label for="fileInput" id="fileInputLabel" class="btn">Choose file...</label>
                 <input type="file" id="fileInput" class="hidden" accept="image/png, image/gif, image/jpeg">
+            <br>
+            <span><b>Grid: </b></span>
+            <select id="gridDropdown" class="btn">
+                <option value="3x3">3x3</option>
+                <option value="3x1">3x1</option>
+            </select>
             <br>
             <span><b>Crop: </b></span>
             <button id="cropBtn" class="btn">
