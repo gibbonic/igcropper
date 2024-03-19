@@ -15,6 +15,7 @@ IGCropper: https://gibbonic.com/igcropper
 ## TO-DO
 - [x] Release v1.0.0
 - [x] Include option for 3x1 croppage - merged from *3x1* branch into *v1.1.0*
+- [ ] Include support for Firefox (replace the usage of zoom specifically for this)
 
 ## License
 MIT License
