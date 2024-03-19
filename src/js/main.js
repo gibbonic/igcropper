@@ -16,6 +16,8 @@ let images;
 
 let overflow;
 
+let gridDropdown;
+
 window.onload = init;
 
 function init(){
