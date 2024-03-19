@@ -27,6 +27,7 @@ function init(){
     vs = document.getElementById('verticalSlider');
     cropBtn = document.getElementById('cropBtn');
     images = document.getElementById('images');
+    gridDropdown = document.getElementById('gridDropdown');
 
     fileInput.onchange = function(){
         preview = document.createElement('img');
@@ -40,6 +41,10 @@ function init(){
 
             preview.onload = function() {
                 document.body.style.cursor = "default";
+
+                // Reset values
+                hs.value = 50;
+                vs.value = 50;
 
                 canvas.width = preview.naturalWidth;
                 canvas.height = preview.naturalHeight;
@@ -87,6 +92,7 @@ function init(){
 
                 cropBtn.onclick = function(){
                     document.body.style.cursor = "wait";
+                    images.innerHTML = `<h2>Images</h2>`;
                     var id = 1;
                     for (let y = 0; y < 3; y++) {
                         var row = document.createElement('div');
