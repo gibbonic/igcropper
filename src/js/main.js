@@ -156,6 +156,7 @@ function init(){
                             }
                             images.appendChild(row);
                         }
+                        images.style.height = `${(canvas.height * canvas.style.zoom) + 100}px`;
                     }
                     else if(gridDropdown.value == "3x1"){
                         var row = document.createElement('div');
@@ -188,9 +189,9 @@ function init(){
                             }
                             row.appendChild(localImage);
                         }
+                        images.style.height = `${((canvas.width / 3) * canvas.style.zoom) + 100}px`;
                         images.appendChild(row);
                     }
-                    images.style.height = `${(canvas.height * canvas.style.zoom) + 100}px`;
                     document.body.style.cursor = "default";
                 }
             }
